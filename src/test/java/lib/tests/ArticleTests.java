@@ -1,4 +1,5 @@
 package lib.tests;
+
 import lib.CoreTestCase;
 import lib.ui.ArticlePageObject;
 import lib.ui.SearchPageObject;

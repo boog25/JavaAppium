@@ -1,19 +1,19 @@
 package lib.ui;
 
+import io.qameta.allure.Step;
 import lib.Platform;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 abstract public class NavigationUI extends MainPageObject{
-
     protected static String
             MY_LISTS_LINK,
             OPEN_NAVIGATION;
-
     public NavigationUI(RemoteWebDriver driver)
     {
         super(driver);
     }
 
+    @Step("Open navigation bar")
     public void openNavigation()
     {
         if (Platform.getInstance().isMW()) {
@@ -27,6 +27,7 @@ abstract public class NavigationUI extends MainPageObject{
         }
     }
 
+    @Step("Click navigation button for 'My Lists' ")
     public void clickMyLists()
     {
         if (Platform.getInstance().isMW()) {
